@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -9,6 +9,7 @@
   
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "Space Grotesk", ui-monospace, monospace;
 }
 
 html {
@@ -19,10 +20,78 @@ body {
   background-color: var(--color-softgray);
   color: var(--color-charcoal);
   font-family: var(--font-sans);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .dark body {
-  background-color: #111827;
+  background-color: #0b0f17;
   color: #f3f4f6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #496A6A;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #B79E97;
+}
+
+/* Sci-fi HUD Corner Brackets */
+.cyber-card {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cyber-card::before, .cyber-card::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: #B79E97;
+  border-style: solid;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.dark .cyber-card::before, .dark .cyber-card::after {
+  border-color: #B79E97;
+}
+
+.cyber-card::before {
+  top: 12px;
+  left: 12px;
+  border-width: 2px 0 0 2px;
+}
+
+.cyber-card::after {
+  bottom: 12px;
+  right: 12px;
+  border-width: 0 2px 2px 0;
+}
+
+.cyber-card:hover::before, .cyber-card:hover::after {
+  opacity: 1;
+}
+
+/* Custom cyber neon glows */
+.neon-glow-teal {
+  box-shadow: 0 0 20px rgba(73, 106, 106, 0.15);
+}
+.dark .neon-glow-teal {
+  box-shadow: 0 0 30px rgba(73, 106, 106, 0.3);
+}
+
+.neon-glow-rose {
+  box-shadow: 0 0 20px rgba(183, 158, 151, 0.15);
+}
+.dark .neon-glow-rose {
+  box-shadow: 0 0 30px rgba(183, 158, 151, 0.35);
 }
