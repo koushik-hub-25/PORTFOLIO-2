@@ -36,13 +36,13 @@ export function InteractiveTerminal() {
       case 'profile':
       case 'bio':
         newLogs.push({
-          text: 'BIOLOGICAL DOSSIER // KOUSHIK N\n-------------------------------\nROLE: Innovative Engineer & Creator\nPASSION: Software Development, Video Editing, VFX, UI/UX\nSTATUS: Actively learning and building digital interfaces.',
+          text: 'BIOLOGICAL DOSSIER // KOUSHIK N\n-------------------------------\nROLE: Innovative Engineer & Creator\nPASSION: Software Development, Unreal Engine 3D Design, Video & Photo Editing\nSTATUS: Actively learning and building digital interfaces.',
           type: 'output'
         });
         break;
       case 'skills':
         newLogs.push({
-          text: 'TECHNICAL COMPETENCIES:\n  [||||||||||] Video Editing (Advanced - 90%)\n  [||||||||| ] Web Development (Advanced - 85%)\n  [||||      ] Photo Editing (Beginner - 40%)\n\nPROGRAMMING KERNEL:\n  C, C++, Python, Java, HTML, CSS, JavaScript, FlutterFlow',
+          text: 'TECHNICAL COMPETENCIES:\n  [||||||||| ] Web Development (Advanced - 85%)\n  [|||||||   ] Unreal Engine 5 (Intermediate - 70%)\n  [||||||.5  ] Video Editing (Intermediate - 65%)\n  [||||||    ] Photo Editing (Intermediate - 60%)\n\nPROGRAMMING KERNEL:\n  C, C++, Python, Java, HTML, CSS, JavaScript, FlutterFlow',
           type: 'output'
         });
         break;
@@ -116,7 +116,7 @@ export function InteractiveTerminal() {
             {Array.from({ length: 20 }).map((_, i) => (
               <div key={i} className="flex gap-4 filter blur-[0.3px]" style={{ opacity: 1 - i * 0.05 }}>
                 {Array.from({ length: 8 }).map((_, j) => (
-                  <span key={j} style={{ color: Math.random() > 0.5 ? '#B79E97' : '#496A6A' }}>
+                  <span key={j} style={{ color: Math.random() > 0.6 ? '#d4ff3f' : Math.random() > 0.5 ? '#00f0ff' : '#c214ff' }}>
                     {Math.random().toString(36).substring(2, 10).toUpperCase()}
                   </span>
                 ))}

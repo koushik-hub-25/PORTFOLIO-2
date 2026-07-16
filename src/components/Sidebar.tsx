@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Linkedin, MapPin, Code } from 'lucide-react';
+import { Mail, Phone, Linkedin, MapPin, Code, Github } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function Sidebar() {
@@ -10,7 +10,7 @@ export function Sidebar() {
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="md:fixed top-0 left-0 h-auto md:h-screen w-full md:w-80 lg:w-96 bg-sidebar/95 dark:bg-[#0c121e]/90 text-white p-8 md:p-10 flex flex-col justify-between shadow-2xl z-20 border-r border-white/5 md:backdrop-blur-xl transition-all duration-500"
+      className="h-auto w-full md:w-80 lg:w-96 shrink-0 bg-sidebar/95 dark:bg-[#0c121e]/90 text-white p-8 md:p-10 flex flex-col justify-between shadow-2xl z-20 border-r border-white/5 transition-all duration-500"
     >
       <div className="flex flex-col items-center md:items-start space-y-6">
         {/* Futuristic Scanning Profile Circle */}
@@ -59,6 +59,7 @@ export function Sidebar() {
           <ContactItem icon={Mail} text="Rns.koushik@gmail.com" href="mailto:Rns.koushik@gmail.com" />
           <ContactItem icon={Linkedin} text="koushik--n" href="https://linkedin.com/in/koushik--n" />
           <ContactItem icon={Code} text="_koushik_25" href="https://leetcode.com/u/_koushik_25/" />
+          <ContactItem icon={Github} text="koushik-hub-25" href="https://github.com/koushik-hub-25" />
           <ContactItem icon={MapPin} text="India" />
         </div>
 
